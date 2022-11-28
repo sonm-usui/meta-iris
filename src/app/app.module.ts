@@ -8,6 +8,8 @@ import { TextToSignComponent } from './text-to-sign/text-to-sign.component';
 import { HeaderComponent } from './header/header.component';
 import { WebsiteComponent } from './website/website.component';
 import { FlexModule } from '@angular/flex-layout';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FlexModule } from '@angular/flex-layout';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FlexModule
+    FlexModule,
+    MatIconModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

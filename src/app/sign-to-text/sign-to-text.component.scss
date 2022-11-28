@@ -8,7 +8,7 @@
       height: 100%;
       overflow: hidden;
       font-family: Arial, sans-serif;
-      background-color: #F0F0F3;
+      background-color: #2A2820;
       color: #333333;
       font-size: 13px;
       letter-spacing: 3px;
@@ -22,8 +22,10 @@
     }
 
     .container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
+          background-color: #2A2820;
+
     }
 
 
@@ -46,7 +48,6 @@
 
     .iris-container {
         padding: 40px 80px;
-        height: calc(100vh - 82px);
     }
 
     .iris-translator {
@@ -59,7 +60,7 @@
 
     .video,
     .debug {
-      padding: 0 20px;
+      //padding: 0 20px;
     }
 
 
@@ -77,7 +78,7 @@
 
     #video-container {
       /* width: 640px; */
-      height: 372px;
+      height: 424px;
       position: relative;
     }
 
@@ -220,4 +221,12 @@ padding: 5px;
 
 .language:hover {
   color: #728AB7;
+}
+
+.lang {
+ border-right: 2px solid #2A2820;
+ height: 40px;
+}
+.lang:hover {
+ color: rgba(187, 134, 252, 1);
 }

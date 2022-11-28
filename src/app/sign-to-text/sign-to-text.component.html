@@ -1,124 +1,127 @@
 <div class="container">
-    <header class="iris-header">
-      <div class="flex items-center">
-        <img src="./assets/IRISlogo.png" height="40px" width="auto">
-
-      </div>
-      <p>About Us</p>
-    </header>
-    <div class="iris-container">
-      <div class="iris-translator">
-        <div class="flex items-center" style="border: 1px solid rgba(89, 98, 115, 0.19); border-radius: 8px 8px 0 0; background-color: #F0F0F3;">
-          <div style="flex: calc(50% - 40px);" class="wrap" >
-            <a href="#" class="btn6">
-              <div class="language">ENGLISH</div>
-            </a>
-          </div>
-          <div style="width: 80px; display: flex; justify-content: center; align-items: center; background-color: #F0F0F3;">
-          </div>
-          <div style="flex: calc(50% - 40px);" class="wrap" >
-            <a href="#" class="btn6" style="display: flex; margin-right: 50px; justify-content: center;">
-              <div class="language" onclick="changeLang('en')" id="en">ENGLISH</div>
-              <div class="language" onclick="changeLang('dzo')" id="dzo">DZONGKHA</div>
-              <div class="language" onclick="changeLang('nepali')" id="nepali">NEPALI</div>
-              <div class="language" onclick="changeLang('sharchop')" id="sharchop">SHARCHOP</div>
-            </a>
-          </div>
+  <div class="iris-container">
+    <div class="">
+      <div class="flex items-center" style="border-radius: 8px 8px 0 0;">
+        <div style="flex: calc(50% - 40px);" class="wrap">
         </div>
-        <div class="flex" style="height: calc(100% - 67px); background-color: #F0F0F3;">
-          <div style="flex: calc(50% - 40px); padding: 24px 32px; border-right: 1px solid rgba(89, 98, 115, 0.19)          ;">
-            <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-              <div style="height: calc(100% - 50px);">
-                <div id="" >
-                  <div style="display: flex; justify-content: center; align-items: center; height: 100%">
+      </div>
+      <div class="flex" fxLayoutGap="40px" style="height: calc(100% - 67px); position: relative;">
+        <div fxFlex="50">
+          <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div style="height: calc(100% - 50px);">
+              <div id="">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100%">
 
-                    <div id="microphone" class="hide-element">
-                      <p style="font-size: 24px; margin: 0;" id="speechToTextResult" class="hide-element"></p><br>
-                      <div  style="background-color: #d4d4d4; border-radius: 50%; height: 250px; width:250px; display:flex; justify-content: center; align-items: center;">
-                        <i id="mic-icon" onclick="getSpeech()" class="fa-solid fa-microphone"
-                        style="cursor: pointer; font-size: 150px; box-shadow: gray;"></i>
-                      </div>
+                  <div id="microphone" class="hide-element">
+                    <p style="font-size: 24px; margin: 0;" id="speechToTextResult" class="hide-element"></p><br>
+                    <div
+                      style="background-color: #d4d4d4; border-radius: 50%; height: 250px; width:250px; display:flex; justify-content: center; align-items: center;">
+                      <i id="mic-icon" onclick="getSpeech()" class="fa-solid fa-microphone"
+                         style="cursor: pointer; font-size: 150px; box-shadow: gray;"></i>
                     </div>
                   </div>
                 </div>
-                <div class="video" id="video">
-                  <div id="video-container">
-                    <video id="pose-video" class="layer" playsinline></video>
-                    <canvas id="pose-canvas" class="layer"></canvas>
-                    <div id="pose-result" class="layer"></div>
-                  </div>
+              </div>
+              <div class="video" id="video">
+                <div id="video-container">
+                  <video id="pose-video" class="layer" playsinline></video>
+                  <canvas id="pose-canvas" class="layer"></canvas>
+                  <div id="pose-result" class="layer"></div>
                 </div>
               </div>
-              <div style="display: flex; align-items: center; cursor: pointer;">
-                <!-- <i class="fa-solid fa-microphone" style="font-size: 25px;" id="smallMicrophone" onclick="getSpeech()"></i> -->
-                <i class="fa-solid fa-times" style="font-size: 25px; display: none;" id="smallCross"
-                  onclick="showCamera()"></i>
-              </div>
+            </div>
+            <div style="display: flex; align-items: center; cursor: pointer;">
+              <!-- <i class="fa-solid fa-microphone" style="font-size: 25px;" id="smallMicrophone" onclick="getSpeech()"></i> -->
+              <i class="fa-solid fa-times" style="font-size: 25px; display: none;" id="smallCross"
+                 onclick="showCamera()"></i>
             </div>
           </div>
-          <div style="width: 80px; display: flex; justify-content: center; align-items: center; background-color: #EBEBEB;">
-            <i class="fa-solid fa-right-left" style="font-size: 30px;" onclick="changeVideo()"></i>
-          </div>
-          <div style="flex: calc(50% - 40px); padding: 24px 32px; border-left: 1px solid rgba(89, 98, 115, 0.19)          ;">
-            <p style="font-size: 24px; margin: 0; color: rgba(89, 98, 115, 0.8);" id="showSign"></p>
-             <img src="./assets/loader.gif" id="loader" class="hide-element">
-             <video loop [muted]="true" autoplay playsinline title="usui" preload="auto" height="auto" width="600" id="signVideo" class="hide-element">
-              <source src="https://www.ablinq.co/wp-content/uploads/2021/09/Website-Background-Social-Compressed-NO-LOGO.mp4" type="video/mp4">
-              </video>
-              </div>
+        </div>
+        <div style="position: absolute; left: calc(50% - 70px); top: calc(50% - 60px)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+            <circle cx="60" cy="60" r="60" fill="#4A3267"/>
+            <g clip-path="url(#clip0_931_11262)">
+              <path
+                d="M78.125 66.875H46.1906L51.9945 60.6539C52.7031 59.8984 52.6641 58.7109 51.9063 58.0078C51.1484 57.2969 49.9609 57.3359 49.2578 58.0938L40.5078 67.4688C39.834 68.189 39.834 69.307 40.5078 70.0273L49.2578 79.4023C49.625 79.7969 50.125 80 50.625 80C51.084 80 51.543 79.834 51.9047 79.4946C52.6616 78.7891 52.7031 77.6024 51.995 76.8454L46.1906 70.625H78.125C79.1602 70.625 80 69.7852 80 68.75C80 67.7148 79.1641 66.875 78.125 66.875ZM41.875 53.125H73.8125L68.0086 59.3461C67.3006 60.103 67.3421 61.2898 68.0989 61.9953C68.8533 62.7058 70.0427 62.6642 70.7481 61.905L79.4981 52.53C80.172 51.8098 80.172 50.6917 79.4981 49.9714L70.7481 40.5964C70.375 40.2002 69.875 40 69.375 40C68.916 40 68.457 40.166 68.0953 40.5054C67.3384 41.2109 67.2969 42.3976 68.005 43.1546L73.8125 49.375H41.875C40.8398 49.375 40 50.2188 40 51.25C40 52.2812 40.8398 53.125 41.875 53.125Z"
+                fill="#BB86FC"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_931_11262">
+                <rect width="40" height="40" fill="white" transform="translate(40 40)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div fxFlex="50" style="background-color: rgb(43, 39, 48);">
+         <div style="background-color: rgba(46, 46, 46, 1); color: rgba(255, 255, 255, 0.8); cursor: pointer" fxLayout="row" fxLayoutAlign="space-evenly">
+           <div class="lang" fxFlex="25" fxLayoutAlign="center center">English</div>
+           <div class="lang" fxFlex="25" fxLayoutAlign="center center">Dzongkha</div>
+           <div class="lang" fxFlex="25" fxLayoutAlign="center center">Sharchop</div>
+           <div class="lang"fxFlex="25"  fxLayoutAlign="center center">Lhotsham-kha</div>
+         </div>
+         <div style="padding: 24px">
+            <p style="font-size: 24px; margin: 0; color: white" id="showSign"></p>
+         </div>
         </div>
       </div>
     </div>
+  </div>
   <div style="display: none">
-    <p><button style="height: 30px; width: 60px; cursor: pointer" onclick="changeLang('en')">EN</button> - <button
-        style="height: 30px; width: 60px; cursor: pointer " onclick="changeLang('dzo')">DZO</button></p>
-    <p> selected language - <p id="lang"></p>
+    <p>
+      <button style="height: 30px; width: 60px; cursor: pointer" onclick="changeLang('en')">EN</button>
+      -
+      <button
+        style="height: 30px; width: 60px; cursor: pointer " onclick="changeLang('dzo')">DZO
+      </button>
+    </p>
+    <p> selected language -
+    <p id="lang"></p>
   </div>
-    <div class="debug" style="display: none">
-      <table class="summary">
-        <thead>
-          <tr>
-            <th>Idx</th>
-            <th>Finger</th>
-            <th style="width: 110px">Curl</th>
-            <th style="width: 170px">Direction</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>0</td>
-            <td>Thumb</td>
-            <td><span id="curl-0">-</span></td>
-            <td><span id="dir-0">-</span></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Index</td>
-            <td><span id="curl-1">-</span></td>
-            <td><span id="dir-1">-</span></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Middle</td>
-            <td><span id="curl-2">-</span></td>
-            <td><span id="dir-2">-</span></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Ring</td>
-            <td><span id="curl-3">-</span></td>
-            <td><span id="dir-3">-</span></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Pinky</td>
-            <td><span id="curl-4">-</span></td>
-            <td><span id="dir-4">-</span></td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="debug" style="display: none">
+    <table class="summary">
+      <thead>
+      <tr>
+        <th>Idx</th>
+        <th>Finger</th>
+        <th style="width: 110px">Curl</th>
+        <th style="width: 170px">Direction</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>0</td>
+        <td>Thumb</td>
+        <td><span id="curl-0">-</span></td>
+        <td><span id="dir-0">-</span></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Index</td>
+        <td><span id="curl-1">-</span></td>
+        <td><span id="dir-1">-</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Middle</td>
+        <td><span id="curl-2">-</span></td>
+        <td><span id="dir-2">-</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Ring</td>
+        <td><span id="curl-3">-</span></td>
+        <td><span id="dir-3">-</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Pinky</td>
+        <td><span id="curl-4">-</span></td>
+        <td><span id="dir-4">-</span></td>
+      </tr>
+      </tbody>
+    </table>
 
-
-    </div>
 
   </div>
+
+</div>

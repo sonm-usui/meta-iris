@@ -1,3 +1,8 @@
 <app-header></app-header>
-<!--<app-sign-to-text></app-sign-to-text>-->
+<ng-container *ngIf="true">
+<app-sign-to-text></app-sign-to-text>
+</ng-container>
+<ng-container *ngIf="false">
+<app-text-to-sign></app-text-to-sign>
+</ng-container>
 <app-website></app-website>
