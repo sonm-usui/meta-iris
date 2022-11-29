@@ -5,8 +5,8 @@
         <div style="flex: calc(50% - 40px);" class="wrap">
         </div>
       </div>
-      <div class="flex" fxLayoutGap="40px" style="height: 100%; position: relative;">
-        <div style="position: absolute; left: calc(50% - 70px); top: calc(50% - 60px)">
+      <div fxLayout="row" fxLayoutGap="40px" style="height: 100%; position: relative;">
+        <div style="position: absolute; left: calc(50% - 60px); top: calc(50% - 60px); z-index: 99999999">
           <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
             <circle cx="60" cy="60" r="60" fill="#4A3267"/>
             <g clip-path="url(#clip0_931_11262)">
@@ -21,15 +21,28 @@
             </defs>
           </svg>
         </div>
-        <div fxFlex="50" style="background-color: rgb(43, 39, 48);">
-         <div style="background-color: rgba(46, 46, 46, 1); color: rgba(255, 255, 255, 0.8); cursor: pointer" fxLayout="row" fxLayoutAlign="space-evenly">
+
+         <!-- <div style="background-color: rgba(46, 46, 46, 1); color: rgba(255, 255, 255, 0.8); cursor: pointer" fxLayout="row" fxLayoutAlign="space-evenly">
            <div class="lang" fxFlex="33" fxLayoutAlign="center center">Voice</div>
            <div class="lang" fxFlex="33" fxLayoutAlign="center center">Text</div>
            <div class="lang" fxFlex="33" fxLayoutAlign="center center">Quick Conversation</div>
-         </div>
-         <div style="padding: 24px; height: 500px">
-            <p style="font-size: 24px; margin: 0; color: white" id="showSign"></p>
-         </div>
+         </div> -->
+        <div fxFlex="50">
+          <mat-tab-group
+            style="background-color: #2E2E2E; color: white !important; cursor: pointer">
+            <mat-tab label="Voice" >
+            <div style="background-color: rgba(187, 134, 252, 1); border-radius: 50%; height: 136px; width:136px; display:flex; justify-content: center; align-items: center; margin-top: 150px; margin-left: 40%">
+                        <i id="mic-icon" (click)="getSpeech()" class="fa-solid fa-microphone"
+                        style="cursor: pointer; font-size: 50px; box-shadow: gray; color: rgba(43, 39, 48, 1)"></i>
+                      </div>
+            </mat-tab>
+            <mat-tab label="Text">
+            <div fxLayout="column" style="padding: 20px" fxLayout="column" fxLayoutAlign="space-between start">
+               <textarea rows="15" cols="37" class="text-area" placeholder="Type to translate" (keydown.enter)="translateText()"></textarea>
+            </div>
+            </mat-tab>
+            <mat-tab label="Quick Conversation"> Content 3</mat-tab>
+          </mat-tab-group>
         </div>
          <div fxFlex="50" style="background-color: white">
 
@@ -96,3 +109,4 @@
   </div>
 
 </div>
+

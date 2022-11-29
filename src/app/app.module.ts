@@ -9,7 +9,9 @@ import { HeaderComponent } from './header/header.component';
 import { WebsiteComponent } from './website/website.component';
 import { FlexModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatTabGroup, MatTabsModule } from '@angular/material/tabs';
+import { MatMenuModule } from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     AppRoutingModule,
     FlexModule,
     MatIconModule,
-    MatTabsModule
+    MatTabsModule,
+    MatMenuModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

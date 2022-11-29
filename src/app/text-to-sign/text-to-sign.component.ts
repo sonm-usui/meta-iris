@@ -12,4 +12,12 @@ export class TextToSignComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getSpeech() {
+    document.getElementById('mic-icon')?.classList.add('ping');
+    //conversion here
+  }
+
+  translateText(){
+    //Translate here
+  }
 }
