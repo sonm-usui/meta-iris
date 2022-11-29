@@ -254,11 +254,11 @@ a {
 }
 
 .content {
-  height: 500px !important;
+  height: 480px !important;
 }
 
 ::ng-deep.mat-tab-body-content {
-  height: 500px !important;
+  height: 380px !important;
   background-color: #2B2730 !important;
   //display: flex !important;
   //justify-content: center !important;
@@ -290,4 +290,17 @@ font-family: 'Sulphur Point', sans-serif;
 
 .text-area:focus {
   border: none;
+}
+
+.button {
+  background-color: rgba(85, 78, 95, 1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.button:hover {
+  background-color: #BB86FC;
+}
+
+.active {
+  background-color: #BB86FC;
 }

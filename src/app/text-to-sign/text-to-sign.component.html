@@ -6,7 +6,7 @@
         </div>
       </div>
       <div fxLayout="row" fxLayoutGap="40px" style="height: 100%; position: relative;">
-        <div style="position: absolute; left: calc(50% - 60px); top: calc(50% - 60px); z-index: 99999999">
+        <div style="position: absolute; left: calc(50% - 60px); top: calc(50% - 60px); z-index: 99999999; cursor: pointer;" (click)="changeToSpeech()">
           <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
             <circle cx="60" cy="60" r="60" fill="#4A3267"/>
             <g clip-path="url(#clip0_931_11262)">
@@ -38,15 +38,106 @@
             </mat-tab>
             <mat-tab label="Text">
             <div fxLayout="column" style="padding: 20px" fxLayout="column" fxLayoutAlign="space-between start">
-               <textarea rows="15" cols="37" class="text-area" placeholder="Type to translate" (keydown.enter)="translateText()"></textarea>
+               <textarea rows="11" cols="37" class="text-area" placeholder="Type to translate" (keydown.enter)="translateText()"></textarea>
             </div>
             </mat-tab>
-            <mat-tab label="Quick Conversation"> Content 3</mat-tab>
+            <mat-tab label="Quick Conversation">
+            <div fxLayout="column">
+              <div style="padding: 20px 0 0 50px; cursor: pointer;" fxLayout="row" fxLayoutGap="10px">
+                  <button mat-raised-button class="button"  [ngClass]="{'active': isActive('all')}" (click)="selectedButton = 'all'">All</button>
+                  <button mat-raised-button class="button"  [ngClass]="{'active': isActive('fav')}" (click)="selectedButton = 'fav'">Favourites</button>
+              </div>
+              <div style="padding: 10px 0px 0 50px; cursor: pointer; margin-right: 50px;" fxLayout="column" fxLayoutGap="2px" *ngFor="let data of allConversations; let index = index">
+               <ng-container *ngIf="selectedButton === 'all'">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                  <div>
+                    {{data.display}}
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="center center">
+                    <div (click)="playVideo(data.id)">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="33" viewBox="0 0 25 33" fill="none">
+                        <g clip-path="url(#clip0_1014_489)">
+                        <path d="M5.0625 3.18744C4.1375 2.61869 2.975 2.59994 2.03125 3.13119C1.0875 3.66244 0.5 4.66244 0.5 5.74994V27.7499C0.5 28.8374 1.0875 29.8374 2.03125 30.3687C2.975 30.8999 4.1375 30.8749 5.0625 30.3124L23.0625 19.3124C23.9562 18.7687 24.5 17.7999 24.5 16.7499C24.5 15.6999 23.9562 14.7374 23.0625 14.1874L5.0625 3.18744Z" fill="#BB86FC"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1014_489">
+                        <rect width="24" height="32" fill="white" transform="translate(0.5 0.75)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    </div>
+                    <div *ngIf="data.fav" (click)="changeFav(index, !data.fav)">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
+                        <path d="M0.5 8.07118V7.78797C0.5 4.37489 2.9668 1.46375 6.33008 0.903207C8.5127 0.532601 10.8223 1.25819 12.4141 2.85243L13 3.43739L13.542 2.85243C15.1777 1.25819 17.4434 0.532601 19.6699 0.903207C23.0342 1.46375 25.5 4.37489 25.5 7.78797V8.07118C25.5 10.0975 24.6602 12.036 23.1758 13.4179L14.3525 21.6552C13.9863 21.997 13.5029 22.1874 13 22.1874C12.4971 22.1874 12.0137 21.997 11.6475 21.6552L2.82373 13.4179C1.34131 12.036 0.500015 10.0975 0.500015 8.07118H0.5Z" fill="#BB86FC"/>
+                        </svg>
+                    </div>
+                    <div *ngIf="!data.fav" (click)="changeFav(index, !data.fav)">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <g clip-path="url(#clip0_1014_275)">
+                        <path opacity="0.4" d="M0.5 10.0713V9.78809C0.5 6.37501 2.9668 3.46388 6.33008 2.90333C8.5127 2.53272 10.8223 3.25831 12.4141 4.85255L13 5.43751L13.542 4.85255C15.1777 3.25831 17.4434 2.53272 19.6699 2.90333C23.0342 3.46388 25.5 6.37501 25.5 9.78809V10.0713C25.5 12.0977 24.6602 14.0361 23.1758 15.418L14.3525 23.6553C13.9863 23.9971 13.5029 24.1875 13 24.1875C12.4971 24.1875 12.0137 23.9971 11.6475 23.6553L2.82373 15.418C1.34131 14.0361 0.500015 12.0977 0.500015 10.0713H0.5Z" fill="white" fill-opacity="0.6"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1014_275">
+                        <rect width="25" height="25" fill="white" transform="translate(0.5 0.75)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+                <hr width="100%">
+               </ng-container>
+               <ng-container *ngIf="selectedButton === 'fav' && data.fav">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                  <div>
+                    {{data.display}}
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="center center">
+                    <div (click)="playVideo(data.id)">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="33" viewBox="0 0 25 33" fill="none">
+                        <g clip-path="url(#clip0_1014_489)">
+                        <path d="M5.0625 3.18744C4.1375 2.61869 2.975 2.59994 2.03125 3.13119C1.0875 3.66244 0.5 4.66244 0.5 5.74994V27.7499C0.5 28.8374 1.0875 29.8374 2.03125 30.3687C2.975 30.8999 4.1375 30.8749 5.0625 30.3124L23.0625 19.3124C23.9562 18.7687 24.5 17.7999 24.5 16.7499C24.5 15.6999 23.9562 14.7374 23.0625 14.1874L5.0625 3.18744Z" fill="#BB86FC"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1014_489">
+                        <rect width="24" height="32" fill="white" transform="translate(0.5 0.75)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    </div>
+                    <div *ngIf="data.fav" (click)="changeFav(index, !data.fav)">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
+                        <path d="M0.5 8.07118V7.78797C0.5 4.37489 2.9668 1.46375 6.33008 0.903207C8.5127 0.532601 10.8223 1.25819 12.4141 2.85243L13 3.43739L13.542 2.85243C15.1777 1.25819 17.4434 0.532601 19.6699 0.903207C23.0342 1.46375 25.5 4.37489 25.5 7.78797V8.07118C25.5 10.0975 24.6602 12.036 23.1758 13.4179L14.3525 21.6552C13.9863 21.997 13.5029 22.1874 13 22.1874C12.4971 22.1874 12.0137 21.997 11.6475 21.6552L2.82373 13.4179C1.34131 12.036 0.500015 10.0975 0.500015 8.07118H0.5Z" fill="#BB86FC"/>
+                        </svg>
+                    </div>
+                    <div *ngIf="!data.fav" (click)="changeFav(index, !data.fav)">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <g clip-path="url(#clip0_1014_275)">
+                        <path opacity="0.4" d="M0.5 10.0713V9.78809C0.5 6.37501 2.9668 3.46388 6.33008 2.90333C8.5127 2.53272 10.8223 3.25831 12.4141 4.85255L13 5.43751L13.542 4.85255C15.1777 3.25831 17.4434 2.53272 19.6699 2.90333C23.0342 3.46388 25.5 6.37501 25.5 9.78809V10.0713C25.5 12.0977 24.6602 14.0361 23.1758 15.418L14.3525 23.6553C13.9863 23.9971 13.5029 24.1875 13 24.1875C12.4971 24.1875 12.0137 23.9971 11.6475 23.6553L2.82373 15.418C1.34131 14.0361 0.500015 12.0977 0.500015 10.0713H0.5Z" fill="white" fill-opacity="0.6"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1014_275">
+                        <rect width="25" height="25" fill="white" transform="translate(0.5 0.75)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+                <hr width="100%">
+               </ng-container>
+
+
+              </div>
+            </div>
+            </mat-tab>
           </mat-tab-group>
         </div>
-         <div fxFlex="50" style="background-color: white">
-
-        </div>
+         <div fxFlex="50" style="background-color: white" fxLayout="row" fxLayoutAlign="center center">
+          <ng-container>
+            <video loop autoplay muted id="vid" height="430px" width="auto" src="" class="ng-star-inserted" style="display: none;"></video>
+          </ng-container>
+               </div>
       </div>
     </div>
   </div>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as fp from '../../assets/fingerpose'
+import { Router } from '@angular/router';
+
 declare let handpose: any;
+
 @Component({
   selector: 'app-sign-to-text',
   templateUrl: './sign-to-text.component.html',
@@ -9,22 +12,23 @@ declare let handpose: any;
 export class SignToTextComponent implements OnInit {
 
   title = 'iris';
-
+  constructor(private router: Router) {
+  }
   ngOnInit() {
-       this.initCamera(
-        this.config.video.width, this.config.video.height, this.config.video.fps
-      ).then((video: any) => {
-        video.play();
-        video.addEventListener("loadeddata", event => {
-          console.log("Camera is ready");
-          this.main();
-        });
+    this.initCamera(
+      this.config.video.width, this.config.video.height, this.config.video.fps
+    ).then((video: any) => {
+      video.play();
+      video.addEventListener("loadeddata", event => {
+        console.log("Camera is ready");
+        this.main();
       });
+    });
 
-      const canvas = document.querySelector("#pose-canvas");
+    const canvas = document.querySelector("#pose-canvas");
     (canvas as any)!.width = this.config.video.width;
     (canvas as any)!.height = this.config.video.height;
-      console.log("Canvas initialized");
+    console.log("Canvas initialized");
   }
 
   changeVideo() {
@@ -56,7 +60,7 @@ export class SignToTextComponent implements OnInit {
   }
 
   setLang() {
-      document.getElementById('lang')!.innerHTML = 'dzo';
+    document.getElementById('lang')!.innerHTML = 'dzo';
   }
 
 
@@ -207,4 +211,8 @@ export class SignToTextComponent implements OnInit {
     }
   }
 
+  changeToText() {
+    this.router.navigateByUrl('app?show=false');
+  }
 }
+

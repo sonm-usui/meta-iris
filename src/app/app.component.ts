@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as fp from '../assets/fingerpose'
+import { ActivatedRoute } from '@angular/router';
 declare let handpose: any;
 
 @Component({
@@ -9,8 +10,17 @@ declare let handpose: any;
 })
 export class AppComponent implements OnInit {
 
+  showST = true;
+  showTS = !this.showST;
+  constructor(private route: ActivatedRoute) {
+  }
   ngOnInit() {
-
+     this.route.queryParams
+      .subscribe(params => {
+        this.showST = params['show'] === 'true';
+        this.showTS = !this.showST;
+      }
+    );
   }
 
 }
