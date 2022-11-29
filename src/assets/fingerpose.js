@@ -381,7 +381,7 @@
                   dzo: "./assets/kuzu-zangpo-dzo.m4a",
                   sharchop: "./assets/kuzu-zangpo-dzo.m4a",
                   nepali: "./assets/Namaskar-nep.m4a",
-                  en: "./assets/Hello-en.m4a",
+                  en: "./assets/files/Hello-en.m4a",
                 },
                 {
                   text: "Nice",
@@ -453,17 +453,18 @@
               var sentence = [];
 
               function showSign(signature) {
+                // document.getElementById("lang").innerHTML = 'en';
                 for (let i = 0; i < signList.length; i++) {
                   if (signList[i].sign == signature.toString()) {
                     document.getElementById("showSign").innerHTML =
                       signList[i].text;
-                    "speechSynthesis" in window
-                      ? console.log("Web Speech API supported!")
-                      : console.log("Web Speech API not supported :-(");
+                    // "speechSynthesis" in window
+                    //   ? console.log("Web Speech API supported!")
+                    //   : console.log("Web Speech API not supported :-(");
                     const synth = window.speechSynthesis;
                     let ourText =
                       signList[i][document.getElementById("lang").innerHTML];
-                    console.log(document.getElementById("lang").innerHTML);
+                    // console.log(document.getElementById("lang").innerHTML);
                     const utterThis = new SpeechSynthesisUtterance(ourText);
                     if (
                       sentence[sentence.length - 1] !=
@@ -473,10 +474,11 @@
                         signList[i][document.getElementById("lang").innerHTML]
                       );
                         var audio = new Audio(
-                          signList[i][document.getElementById("lang").innerHTML]
+                          signList[i]['en']
                         );
+                        // console.log(signList[i]['en']);
                         audio.play();
-                      
+
                     }
                   }
                 }
@@ -502,7 +504,8 @@
                             a.getName(i.curls[f]),
                             l.getName(i.directions[f]),
                           ]);
-                          console.log(u.toString());
+                          ////
+                          // console.log(u.toString());
                           showSign(u);
                         }
                       } catch (t) {

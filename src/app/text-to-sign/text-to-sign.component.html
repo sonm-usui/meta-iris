@@ -29,16 +29,18 @@
          </div> -->
         <div fxFlex="50">
           <mat-tab-group
-            style="background-color: #2E2E2E; color: white !important; cursor: pointer">
+            style="background-color: #2E2E2E; color: white !important; cursor: pointer" (selectedTabChange)="onTabChanged($event);">
             <mat-tab label="Voice" >
+              <div id="speechToTextResult">{{words}}</div>
             <div style="background-color: rgba(187, 134, 252, 1); border-radius: 50%; height: 136px; width:136px; display:flex; justify-content: center; align-items: center; margin-top: 150px; margin-left: 40%">
                         <i id="mic-icon" (click)="getSpeech()" class="fa-solid fa-microphone"
                         style="cursor: pointer; font-size: 50px; box-shadow: gray; color: rgba(43, 39, 48, 1)"></i>
                       </div>
             </mat-tab>
+
             <mat-tab label="Text">
             <div fxLayout="column" style="padding: 20px" fxLayout="column" fxLayoutAlign="space-between start">
-               <textarea rows="11" cols="37" class="text-area" placeholder="Type to translate" (keydown.enter)="translateText()"></textarea>
+               <textarea  rows="11" cols="37" class="text-area" placeholder="Type to translate" (keydown.enter)="translateText()" [(ngModel)] = "words"></textarea>
             </div>
             </mat-tab>
             <mat-tab label="Quick Conversation">
@@ -133,9 +135,9 @@
             </mat-tab>
           </mat-tab-group>
         </div>
-         <div fxFlex="50" style="background-color: white" fxLayout="row" fxLayoutAlign="center center">
+         <div fxFlex="50" style="background-color: rgba(0, 0,0, 0.3)" fxLayout="row" fxLayoutAlign="center center">
           <ng-container>
-            <video loop autoplay muted id="vid" height="430px" width="auto" src="" class="ng-star-inserted" style="display: none;"></video>
+            <video autoplay muted id="vid" height="430px" width="100%" src="" class="ng-star-inserted" style="display: none;"></video>
           </ng-container>
                </div>
       </div>
@@ -150,7 +152,7 @@
       </button>
     </p>
     <p> selected language -
-    <p id="lang"></p>
+    <p id="lang">en</p>
   </div>
   <div class="debug" style="display: none">
     <table class="summary">
