@@ -59,8 +59,9 @@ export class SignToTextComponent implements OnInit {
     recognition.start();
   }
 
-  setLang() {
-    document.getElementById('lang')!.innerHTML = 'dzo';
+  setLang(lang: any) {
+    localStorage.setItem('lang', lang);
+    // document.getElementById('lang')!.innerHTML = 'dzo';
   }
 
 
