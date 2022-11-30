@@ -54,10 +54,10 @@
         </div>
         <div fxFlex="50" style="background-color: rgb(43, 39, 48);">
          <div style="background-color: rgba(46, 46, 46, 1); color: rgba(255, 255, 255, 0.8); cursor: pointer" fxLayout="row" fxLayoutAlign="space-evenly">
-           <div class="lang" fxFlex="25" fxLayoutAlign="center center">English</div>
-           <div class="lang" fxFlex="25" fxLayoutAlign="center center">Dzongkha</div>
-           <div class="lang" fxFlex="25" fxLayoutAlign="center center">Sharchop</div>
-           <div class="lang"fxFlex="25"  fxLayoutAlign="center center">Lhotsham-kha</div>
+           <div class="lang" fxFlex="25" fxLayoutAlign="center center" (click)="setLang('en')">English</div>
+           <div class="lang" fxFlex="25" fxLayoutAlign="center center" (click)="setLang('dzo')">Dzongkha</div>
+           <div class="lang" fxFlex="25" fxLayoutAlign="center center" (click)="setLang('sharchop')">Sharchop</div>
+           <div class="lang"fxFlex="25"  fxLayoutAlign="center center" (click)="setLang('nepali')">Lhotsham-kha</div>
          </div>
          <div style="padding: 24px">
             <p style="font-size: 24px; margin: 0; color: white" id="showSign"></p>

@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
         this.showTS = !this.showST;
       }
     );
+    localStorage.setItem('lang', 'en');
   }
 
 }
