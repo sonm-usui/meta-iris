@@ -98,7 +98,6 @@ export class TextToSignComponent implements OnInit {
     console.log("this might take some time....");
     await delay(1000);
     console.log("done!")
-    // let num =  +testNumber+1;
     return 2;
   }
 
