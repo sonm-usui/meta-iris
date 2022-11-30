@@ -20,6 +20,29 @@
     href="https://fonts.googleapis.com/css2?family=Barlow:ital@1&family=Kanit:ital@1&family=Manrope:wght@300;500;700&family=Mulish&family=Nunito:ital,wght@1,600&family=Roboto+Condensed:ital@1&family=Roboto+Mono&family=Roboto:wght@400;700&family=Shadows+Into+Light&family=Sulphur+Point&display=swap"
     rel="stylesheet">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDOMn_BzsWRrDcv4U0aVdiO-j8cWNi4juk",
+        authDomain: "iris-meta.firebaseapp.com",
+        projectId: "iris-meta",
+        storageBucket: "iris-meta.appspot.com",
+        messagingSenderId: "286744420981",
+        appId: "1:286744420981:web:5c1fe4b44559a03dbece3c",
+        measurementId: "G-Q0X4TG140P"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
 
 </head>
 <body>
