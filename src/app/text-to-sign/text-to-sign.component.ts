@@ -96,7 +96,7 @@ export class TextToSignComponent implements OnInit {
 
   async showMessageSuccess(){
     console.log("this might take some time....");
-    await delay(1000);
+    await delay(1500);
     console.log("done!")
     return 2;
   }

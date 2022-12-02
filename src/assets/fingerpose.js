@@ -384,29 +384,14 @@
                   en: "./assets/files/Hello-en.m4a",
                 },
                 {
-                  text: "Nice",
-                  sign: "Thumb,No Curl,Diagonal Up Left,Index,No Curl,Diagonal Up Left,Middle,No Curl,Diagonal Up Left,Ring,No Curl,Diagonal Up Left,Pinky,No Curl,Diagonal Up Left",
-                  dzo: "./assets/files/Nice-dzo.m4a",
-                  sharchop: "./assets/files/sem-shar.m4a",
-                  nepali: "./assets/files/Kushi-nep.m4a",
-                  en: "./assets/files/niceto-en.m4a",
-                },
-                {
-                  text: "You",
+                  text: "KA",
                   sign: "Thumb,No Curl,Vertical Up,Index,No Curl,Vertical Up,Middle,No Curl,Vertical Up,Ring,No Curl,Vertical Up,Pinky,No Curl,Vertical Up",
                   dzo: "./assets/files/Choe-dzo.m4a",
                   sharchop: "./assets/files/nan-shar.m4a",
                   nepali: "./assets/files/Tapai-nep.m4a",
                   en: "./assets/files/you-en.m4a",
                 },
-                {
-                  text: "meet",
-                  sign: "Thumb,No Curl,Horizontal Right,Index,No Curl,Horizontal Right,Middle,No Curl,Horizontal Right,Ring,Full Curl,Horizontal Right,Pinky,Full Curl,Horizontal Right",
-                  dzo: "./assets/files/cheybay-dzo.m4a",
-                  sharchop: "./assets/files/Rumen-shar.m4a",
-                  nepali: "./assets/files/bata-nep.m4a",
-                  en: "./assets/files/Meet-en.m4a",
-                },
+
                 {
                   text: "my",
                   sign: "Thumb,No Curl,Diagonal Up Left,Index,No Curl,Horizontal Left,Middle,No Curl,Horizontal Left,Ring,No Curl,Horizontal Left,Pinky,No Curl,Horizontal Left",
@@ -425,15 +410,14 @@
                 },
                 {
                   text: "This is",
-                  sign: "Thumb,No Curl,Diagonal Up Left,Index,No Curl,Vertical Up,Middle,Full Curl,Diagonal Up Left,Ring,Full Curl,Vertical Up,Pinky,Full Curl,Vertical Up",
+                  sign: "Thumb,No Curl,Diagonal Down Left,Index,No Curl,Vertical Down,Middle,Full Curl,Diagonal Down Left,Ring,Full Curl,Vertical Down,Pinky,Full Curl,Vertical Down",
                   dzo: "./assets/files/dhi-dzo.m4a",
                   sharchop: "./assets/files/Unu-shar.m4a",
                   nepali: "./assets/files/Yo-nep.m4a",
-                  en: "./assets/files/thisis-en.m4a",
-
+                  en: "./assets/files/thisis-en.m4a",   
                 },
                 {
-                  text: "Demo",
+                  text: "B",
                   sign: "Thumb,Half Curl,Diagonal Up Right,Index,No Curl,Vertical Up,Middle,No Curl,Vertical Up,Ring,No Curl,Vertical Up,Pinky,No Curl,Vertical Up",
                   dzo: "./assets/files/Paten-dzo.m4a",
                   sharchop: "./assets/files/demo-shar.m4a",
@@ -442,13 +426,94 @@
 
                 },
                 {
-                  text: "Lalit",
+                  text: "U",
                   sign: "Thumb,Half Curl,Diagonal Up Right,Index,No Curl,Vertical Up,Middle,No Curl,Vertical Up,Ring,Full Curl,Vertical Up,Pinky,Full Curl,Vertical Up",
                   dzo: "./assets/files/lalit.m4a",
                   sharchop: "./assets/files/lalit.m4a",
                   nepali: "./assets/files/lalit.m4a",
                   en: "./assets/files/lalit.m4a",
                 },
+                {
+                  text: "A",
+                  dzo: "./assets/files/lalit.m4a",
+                  sharchop: "./assets/files/lalit.m4a",
+                  nepali: "./assets/files/lalit.m4a",
+                  en: "./assets/files/lalit.m4a",
+                  sign: "Thumb,No Curl,Diagonal Up Left,Index,Full Curl,Diagonal Up Left,Middle,Full Curl,Diagonal Up Left,Ring,Full Curl,Vertical Up,Pinky,Full Curl,Vertical Up"
+                },
+                {
+                  text: "C",
+                  dzo: "./assets/files/lalit.m4a",
+                  sharchop: "./assets/files/lalit.m4a",
+                  nepali: "./assets/files/lalit.m4a",
+                  en: "./assets/files/lalit.m4a",
+                  sign: "Thumb,No Curl,Diagonal Up Left,Index,Half Curl,Diagonal Up Left,Middle,Half Curl,Diagonal Up Left,Ring,Half Curl,Diagonal Up Left,Pinky,Half Curl,Diagonal Up Left",
+                },
+                {
+                  text: "L",
+                  dzo: "./assets/files/lalit.m4a",
+                  sharchop: "./assets/files/lalit.m4a",
+                  nepali: "./assets/files/lalit.m4a",
+                  en: "./assets/files/lalit.m4a",
+                  sign: "Thumb,No Curl,Diagonal Up Left,Index,No Curl,Vertical Up,Middle,Full Curl,Vertical Up,Ring,Full Curl,Vertical Up,Pinky,Full Curl,Diagonal Up Right",
+                },
+                {
+                  text: "I",
+                dzo: "./assets/files/lalit.m4a",
+                sharchop: "./assets/files/lalit.m4a",
+                nepali: "./assets/files/lalit.m4a",
+                en: "./assets/files/lalit.m4a",
+                  sign: "Thumb,Half Curl,Vertical Up,Index,Full Curl,Diagonal Up Left,Middle,Full Curl,Vertical Up,Ring,Full Curl,Vertical Up,Pinky,No Curl,Vertical Up"
+                },
+                {
+                  text: "T",
+                dzo: "./assets/files/lalit.m4a",
+                sharchop: "./assets/files/lalit.m4a",
+                nepali: "./assets/files/lalit.m4a",
+                en: "./assets/files/lalit.m4a",
+                  sign: "Thumb,No Curl,Vertical Up,Index,Full Curl,Vertical Up,Middle,Full Curl,Vertical Up,Ring,Full Curl,Vertical Up,Pinky,Full Curl,Diagonal Up Right"
+                },
+                {
+                  text: "Demo",
+                  dzo: "./assets/files/lalit.m4a",
+                  sharchop: "./assets/files/lalit.m4a",
+                  nepali: "./assets/files/lalit.m4a",
+                  en: "./assets/files/lalit.m4a",
+                  sign: "Thumb,Half Curl,Horizontal Left,Index,No Curl,Horizontal Left,Middle,Full Curl,Horizontal Left,Ring,Full Curl,Horizontal Left,Pinky,Full Curl,Horizontal Left"
+                },
+                {
+                  text: "Thank you",
+                  dzo: "./assets/files/lalit.m4a",
+                  sharchop: "./assets/files/lalit.m4a",
+                  nepali: "./assets/files/lalit.m4a",
+                  en: "./assets/files/lalit.m4a",
+                  sign: "Thumb,No Curl,Diagonal Up Left,Index,No Curl,Diagonal Up Left,Middle,No Curl,Diagonal Up Left,Ring,No Curl,Diagonal Up Left,Pinky,No Curl,Diagonal Up Left"
+                },
+                {
+                  text: "U",
+                  dzo: "./assets/files/lalit.m4a",
+                  sharchop: "./assets/files/lalit.m4a",
+                  nepali: "./assets/files/lalit.m4a",
+                  en: "./assets/files/lalit.m4a",
+                  sign: "Thumb,No Curl,Diagonal Up Left,Index,No Curl,Vertical Up,Middle,No Curl,Diagonal Up Left,Ring,No Curl,Diagonal Up Left"
+                },
+                {
+                  text: "Amazing",
+                  dzo: "./assets/files/lalit.m4a",
+                  sharchop: "./assets/files/lalit.m4a",
+                  nepali: "./assets/files/lalit.m4a",
+                  en: "./assets/files/lalit.m4a",
+                  sign: "Thumb,No Curl,Diagonal Up Left,Index,Full Curl,Diagonal Up Left,Middle,Full Curl,Vertical Up,Ring,Full Curl,Vertical Up,Pinky,No Curl,Vertical Up"
+                },
+                {
+                  text: "NGA",
+                  dzo: "./assets/files/lalit.m4a",
+                  sharchop: "./assets/files/lalit.m4a",
+                  nepali: "./assets/files/lalit.m4a",
+                  en: "./assets/files/lalit.m4a",
+                  sign: 'Thumb,Half Curl,Diagonal Up Left,Index,Full Curl,Diagonal Up Left,Middle,Full Curl,Diagonal Up Left,Ring,Full Curl,Horizontal Left,Pinky,No Curl,Horizontal Left'
+                }
+
               ];
               var sentence = [];
 
@@ -505,7 +570,7 @@
                             l.getName(i.directions[f]),
                           ]);
                           ////
-                          // console.log(u.toString());
+                          console.log(u.toString());
                           showSign(u);
                         }
                       } catch (t) {
