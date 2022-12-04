@@ -412,7 +412,7 @@
                   text: "This is",
                   sign: "Thumb,No Curl,Diagonal Down Left,Index,No Curl,Vertical Down,Middle,Full Curl,Diagonal Down Left,Ring,Full Curl,Vertical Down,Pinky,Full Curl,Vertical Down",
                   dzo: "./assets/files/GA-Dzo.m4a",
-                  // sharchop: "./assets/files/Unu-shar.m4a",
+                  sharchop: "./assets/files/Unu-shar.m4a",
                   // nepali: "./assets/files/Yo-nep.m4a",
                   en: "./assets/files/thisis-en.m4a",
                 },
@@ -476,16 +476,16 @@
                 {
                   text: "Demo",
                   dzo: "./assets/files/KHA-DZO.m4a",
-                  // sharchop: "./assets/files/lalit.m4a",
+                  sharchop: "./assets/files/demo-shar.m4a",
                   // nepali: "./assets/files/lalit.m4a",
                   // en: "./assets/files/lalit.m4a",
                   sign: "Thumb,Half Curl,Horizontal Left,Index,No Curl,Horizontal Left,Middle,Full Curl,Horizontal Left,Ring,Full Curl,Horizontal Left,Pinky,Full Curl,Horizontal Left"
                 },
                 {
-                  text: "Thank you",
+                  text: "",
                   // dzo: "./assets/files/lalit.m4a",
                   sharchop: "./assets/files/kadrinchey-shar.m4a",
-                  // nepali: "./assets/files/lalit.m4a",
+                  nepali: "./assets/files/Danya-beth-nep.m4a",
                   // en: "./assets/files/lalit.m4a",
                   sign: "Thumb,No Curl,Diagonal Up Left,Index,No Curl,Diagonal Up Left,Middle,No Curl,Diagonal Up Left,Ring,No Curl,Diagonal Up Left,Pinky,No Curl,Diagonal Up Left"
                 },
@@ -521,8 +521,12 @@
                 document.getElementById("lang").innerHTML = localStorage.getItem('lang') || 'en';
                 for (let i = 0; i < signList.length; i++) {
                   if (signList[i].sign == signature.toString()) {
-                    document.getElementById("showSign").innerHTML =
-                      signList[i].text;
+                    if( document.getElementById("lang").innerHTML === 'en'){
+                      document.getElementById("showSign").innerHTML = signList[i].text;
+                    } else {
+                      document.getElementById("showSign").innerHTML = '';
+                    }
+
                     // "speechSynthesis" in window
                     //   ? console.log("Web Speech API supported!")
                     //   : console.log("Web Speech API not supported :-(");
