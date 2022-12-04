@@ -10,6 +10,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 export class TextToSignComponent implements OnInit {
 
   selectedButton = 'all';
+  playback = 1;
   showSign = false;
   displayArray = [];
   words: string = '';
@@ -122,5 +123,9 @@ export class TextToSignComponent implements OnInit {
         this.translateText();
       }
       recognition.start();
+    }
+
+    playBack(speed: number) {
+      (document.getElementById('vid')as any).playbackRate = speed;
     }
 }

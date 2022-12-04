@@ -14,6 +14,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { BannerComponent } from './banner/banner.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     TextToSignComponent,
     HeaderComponent,
     WebsiteComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,

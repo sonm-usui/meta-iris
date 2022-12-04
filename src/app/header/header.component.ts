@@ -10,6 +10,9 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.addEventListener('scroll', (e) => {
+        (document.getElementById('header-id')as any).style.backgroundColor = 'rgba(48, 45, 37, 1)';
+    });
   }
 
 }

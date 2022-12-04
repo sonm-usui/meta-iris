@@ -1,8 +1,11 @@
 <app-header></app-header>
-<ng-container *ngIf="showST">
-<app-sign-to-text></app-sign-to-text>
-</ng-container>
-<ng-container *ngIf="showTS">
-<app-text-to-sign></app-text-to-sign>
-</ng-container>
+<app-banner></app-banner>
+<div id="translator" style="padding-top: 70px; background-color: #2A2820;">
+  <ng-container *ngIf="showST">
+    <app-sign-to-text></app-sign-to-text>
+    </ng-container>
+    <ng-container *ngIf="showTS">
+    <app-text-to-sign></app-text-to-sign>
+    </ng-container>
+</div>
 <app-website></app-website>

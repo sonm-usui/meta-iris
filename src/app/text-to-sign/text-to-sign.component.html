@@ -135,11 +135,16 @@
             </mat-tab>
           </mat-tab-group>
         </div>
-         <div fxFlex="50" style="background-color: rgba(227, 222, 232, 1)" fxLayout="row" fxLayoutAlign="center center">
-          <ng-container>
+          <div fxFlex="50" style="background-color: rgba(227, 222, 232, 1); position: relative;">
+          <div fxLayout="row" fxLayoutAlign="center center">
             <video autoplay muted id="vid" height="430px" width="100%" src="" class="ng-star-inserted" style="display: none;"></video>
-          </ng-container>
-               </div>
+          </div>
+          <div style="cursor: pointer; position: absolute; bottom: 4px; right: 4px;" fxLayout="row" fxLayoutGap="10px">
+            <button mat-raised-button class="button"  [ngClass]="{'active': isActive('0.5')}" (click)="playBack(0.5)">0.5x</button>
+            <button mat-raised-button class="button"  [ngClass]="{'active': isActive('1')}" (click)="playBack(1)">1x</button>
+            <button mat-raised-button class="button"  [ngClass]="{'active': isActive('2')}" (click)="playBack(2)">2x</button>
+        </div>
+         </div>
       </div>
     </div>
   </div>
